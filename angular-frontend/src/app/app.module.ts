@@ -8,10 +8,15 @@ import { CreateEmployeeComponent } from './create-employee/create-employee.compo
 import { FormsModule} from '@angular/forms';
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
-import { CreateProduitComponent } from './create-produit/create-produit.component';
-import { ProduitDetailsComponent } from './produit-details/produit-details.component';
-import { UpdateProduitComponent } from './update-produit/update-produit.component';
-import { ProduitListComponent } from './produit-list/produit-list.component'
+import { CreateVenteeComponent } from './create-ventee/create-ventee.component';
+import { UpdateVenteeComponent } from './update-ventee/update-ventee.component';
+import { VenteeDetailsComponent } from './ventee-details/ventee-details.component';
+import { VenteeListComponent } from './ventee-list/ventee-list.component';
+import { CreateStockeComponent } from './create-stocke/create-stocke.component';
+import { UpdateStockeComponent } from './update-stocke/update-stocke.component';
+import { StockeDetailsComponent } from './stocke-details/stocke-details.component';
+import { StockeListComponent } from './stocke-list/stocke-list.component';
+
 
 @NgModule({
   declarations: [
@@ -20,10 +25,17 @@ import { ProduitListComponent } from './produit-list/produit-list.component'
     CreateEmployeeComponent,
     UpdateEmployeeComponent,
     EmployeeDetailsComponent,
-    CreateProduitComponent,
-    ProduitDetailsComponent,
-    UpdateProduitComponent,
-    ProduitListComponent
+    CreateVenteeComponent,
+    UpdateVenteeComponent,
+    VenteeDetailsComponent,
+    VenteeListComponent,
+    CreateStockeComponent,
+    UpdateStockeComponent,
+    StockeDetailsComponent,
+    StockeListComponent,
+
+    
+
   ],
   imports: [
     BrowserModule,

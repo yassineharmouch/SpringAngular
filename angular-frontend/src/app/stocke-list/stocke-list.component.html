@@ -1,0 +1,21 @@
+<h2> Stock List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Name</th>
+            <th> Adresse </th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let stocke of stockes" >
+            <td> {{ stocke.name }} </td>
+            <td> {{ stocke.adresse }} </td>
+            <td>
+                <button (click) = "updateStocke(stocke.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteStocke(stocke.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "stockeDetails(stocke.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
