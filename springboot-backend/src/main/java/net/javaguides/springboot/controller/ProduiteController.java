@@ -67,7 +67,7 @@ public class ProduiteController {
 	}
 
 	// delete employee rest api
-	@DeleteMapping("/employees/{id}")
+	@DeleteMapping("/produites/{id}")
 	public ResponseEntity<Map<String, Boolean>> deleteProduite(@PathVariable Long id){
 		Produite produite = produiteRepository.findById(id)
 				.orElseThrow(() -> new ResourceNotFoundException("produite not exist with id :" + id));

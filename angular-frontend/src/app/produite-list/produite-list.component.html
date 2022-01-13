@@ -1,1 +1,25 @@
-<p>produite-list works!</p>
+<h2> produite List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Name</th>
+            <th>  Code </th>
+            <th> Prix</th>
+            <th> Qte</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let produite of produites" >
+            <td> {{ produite.name }} </td>
+            <td> {{ produite.code }} </td>
+            <td> {{ produite.prix }} </td>
+            <td> {{ produite.qte }} </td>
+            <td>
+                <button (click) = "updateProduite(produite.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteProduite(produite.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "produiteDetails(produite.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
