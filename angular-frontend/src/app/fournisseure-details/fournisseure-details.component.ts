@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Fournisseure } from '../fournisseure';
+import { ActivatedRoute } from '@angular/router';
+import { FournisseureService } from '../fournisseure.service';
 @Component({
   selector: 'app-fournisseure-details',
   templateUrl: './fournisseure-details.component.html',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FournisseureDetailsComponent implements OnInit {
 
-  constructor() { }
+  
+  id: number
+  fournisseure: Fournisseure
+  constructor(private route: ActivatedRoute, private fournisseureService:FournisseureService) { }
 
   ngOnInit(): void {
+    this.id = this.route.snapshot.params['id'];
+
+    this.fournisseure = new Fournisseure();
+    this.fournisseureService.getFournisseureById(this.id).subscribe( data => {
+      this.fournisseure = data;
+    });
   }
 
 }
