@@ -1,1 +1,23 @@
-<p>cliente-list works!</p>
+<h2> Client List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>  Name</th>
+            <th> Last Name </th>
+            <th> Adresse</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let cliente of clientes" >
+            <td> {{ cliente.nom }} </td>
+            <td> {{ cliente.prenom }} </td>
+            <td> {{ cliente.adresse }} </td>
+            <td>
+                <button (click) = "updateCliente(cliente.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteCliente(cliente.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "clienteDetails(cliente.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

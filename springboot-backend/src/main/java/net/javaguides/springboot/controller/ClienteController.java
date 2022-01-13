@@ -51,7 +51,7 @@ public class ClienteController {
 
 	// update employee rest api
 
-	@PutMapping("/employees/{id}")
+	@PutMapping("/clientes/{id}")
 	public ResponseEntity<Cliente> updateEmployee(@PathVariable Long id, @RequestBody Cliente clienteDetails){
 		Cliente cliente = clienteRepository.findById(id)
 				.orElseThrow(() -> new ResourceNotFoundException("Cliente not exist with id :" + id));
@@ -66,7 +66,7 @@ public class ClienteController {
 	}
 
 	// delete employee rest api
-	@DeleteMapping("/employees/{id}")
+	@DeleteMapping("/clientes/{id}")
 	public ResponseEntity<Map<String, Boolean>> deleteCliente(@PathVariable Long id){
 		Cliente cliente = clienteRepository.findById(id)
 				.orElseThrow(() -> new ResourceNotFoundException("Cliente not exist with id :" + id));
