@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Table(name = "stockes")
 public class Stocke {
 
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
@@ -22,7 +22,7 @@ public class Stocke {
 	@Column(name = "adresse")
 	private String adresse;
 
-	
+
 
 	public Stocke() {
 
@@ -57,6 +57,6 @@ public class Stocke {
 	public void setAdresse(String adresse) {
 		this.adresse = adresse;
 	}
-	
-	
+
+
 }

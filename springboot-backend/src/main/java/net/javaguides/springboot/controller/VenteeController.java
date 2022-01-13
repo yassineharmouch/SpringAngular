@@ -24,8 +24,8 @@ import net.javaguides.springboot.repository.VenteeRepository;
 @RestController
 @RequestMapping("/api/v2/")
 public class VenteeController {
- 
-	
+
+
 	@Autowired
 	private VenteeRepository venteeRepository;
 
@@ -56,9 +56,8 @@ public class VenteeController {
 		Ventee ventee = venteeRepository.findById(id)
 				.orElseThrow(() -> new ResourceNotFoundException("Ventee not exist with id :" + id));
 
-		ventee.setName(venteeDetails.getName());
-		ventee.setCode(venteeDetails.getCode());
-		ventee.setPrix(venteeDetails.getPrix());
+		ventee.setDate(venteeDetails.getDate());
+
 
 		Ventee updatedVentee = venteeRepository.save(ventee);
 		return ResponseEntity.ok(updatedVentee);

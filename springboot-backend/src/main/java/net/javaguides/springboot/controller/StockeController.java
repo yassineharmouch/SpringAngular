@@ -24,7 +24,7 @@ import net.javaguides.springboot.repository.StockeRepository;
 @RestController
 @RequestMapping("/api/v3/")
 public class StockeController {
-	
+
 
 	@Autowired
 	private StockeRepository stockeRepository;
@@ -58,7 +58,7 @@ public class StockeController {
 
 		stocke.setName(stockeDetails.getName());
 		stocke.setAdresse(stockeDetails.getAdresse());
-		
+
 
 		Stocke updatedStocke = stockeRepository.save(stocke);
 		return ResponseEntity.ok(updatedStocke);

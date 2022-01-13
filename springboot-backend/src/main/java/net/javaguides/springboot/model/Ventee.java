@@ -1,5 +1,7 @@
 package net.javaguides.springboot.model;
 
+import java.sql.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,62 +12,37 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "ventees")
 public class Ventee {
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
-	@Column(name = "name")
-	private String name;
 
-	@Column(name = "code")
-	private String code;
 
-	@Column(name = "prix")
-	private String prix;
+	@Column(name = "date")
+	private Date date;
 
 	public Ventee() {
 
 	}
-
-	public Ventee(String name, String code, String prix) {
+	public Ventee(long id, Date date) {
 		super();
-		this.name = name;
-		this.code = code;
-		this.prix = prix;
-	}
+		this.id = id;
 
+		this.date = date;
+	}
 	public long getId() {
 		return id;
 	}
-
 	public void setId(long id) {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
 
-	public String getCode() {
-		return code;
-	}
-
-	public void setCode(String code) {
-		this.code = code;
-	}
-
-	public String getPrix() {
-		return prix;
-	}
-
-	public void setPrix(String prix) {
-		this.prix = prix;
-	}
-	
-	
 }
