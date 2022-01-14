@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class VenteeListComponent implements OnInit {
 
-    
+  
   ventees: Ventee[];
 
   constructor(private venteeService: VenteeService,
@@ -25,7 +25,7 @@ export class VenteeListComponent implements OnInit {
     });
   }
 
-  VenteeDetails(id: number){
+  venteeDetails(id: number){
     this.router.navigate(['ventee-details', id]);
   }
 

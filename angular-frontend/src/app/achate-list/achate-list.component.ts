@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class AchateListComponent implements OnInit {
 
-    
+ 
   achates: Achate[];
 
   constructor(private achateService: AchateService,
@@ -25,7 +25,7 @@ export class AchateListComponent implements OnInit {
     });
   }
 
-  AchateDetails(id: number){
+  achateDetails(id: number){
     this.router.navigate(['achate-details', id]);
   }
 
