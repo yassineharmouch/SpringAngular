@@ -20,12 +20,12 @@ public class Achate {
 
 
 	@Column(name = "date")
-	private Date date;
+	private String date;
 
 	public Achate() {
 
 	}
-	public Achate(long id, Date date) {
+	public Achate(long id, String date) {
 		super();
 		this.id = id;
 		this.date = date;
@@ -37,10 +37,10 @@ public class Achate {
 		this.id = id;
 	}
 
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 

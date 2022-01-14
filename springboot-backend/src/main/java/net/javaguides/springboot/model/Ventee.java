@@ -19,12 +19,12 @@ public class Ventee {
 
 
 	@Column(name = "date")
-	private Date date;
+	private String date;
 
 	public Ventee() {
 
 	}
-	public Ventee(long id, Date date) {
+	public Ventee(long id, String date) {
 		super();
 		this.id = id;
 
@@ -37,10 +37,10 @@ public class Ventee {
 		this.id = id;
 	}
 
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 

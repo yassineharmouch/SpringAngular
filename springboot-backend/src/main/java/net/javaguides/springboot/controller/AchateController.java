@@ -38,13 +38,13 @@ public class AchateController {
 
 	// create employee rest api
 	@PostMapping("/achates")
-	public Achate createVentee(@RequestBody Achate achate) {
+	public Achate createAchate(@RequestBody Achate achate) {
 		return achateRepository.save(achate);
 	}
 
 	// get employee by id rest api
 	@GetMapping("/achates/{id}")
-	public ResponseEntity<Achate> getVenteeById(@PathVariable Long id) {
+	public ResponseEntity<Achate> getAchateeById(@PathVariable Long id) {
 		Achate achate = achateRepository.findById(id)
 				.orElseThrow(() -> new ResourceNotFoundException("Achate not exist with id :" + id));
 		return ResponseEntity.ok(achate);

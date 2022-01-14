@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Achate } from '../achate';
+import { ActivatedRoute } from '@angular/router';
+import { AchateService } from '../achate.service';
 @Component({
   selector: 'app-achate-details',
   templateUrl: './achate-details.component.html',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AchateDetailsComponent implements OnInit {
 
-  constructor() { }
+ 
+  id: number
+  achate: Achate
+  constructor(private route: ActivatedRoute, private achateService:AchateService) { }
 
   ngOnInit(): void {
+    this.id = this.route.snapshot.params['id'];
+
+    this.achate = new Achate();
+    this.achateService.getAchateById(this.id).subscribe( data => {
+      this.achate = data;
+    });
   }
 
 }
