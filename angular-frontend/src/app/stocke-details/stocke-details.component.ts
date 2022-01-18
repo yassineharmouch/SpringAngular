@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Stocke } from '../stocke';
+import { Stocke } from '../module/stocke';
 import { ActivatedRoute } from '@angular/router';
-import { StockeService } from '../stocke.service';
+import { StockeService } from '../service/stocke.service';
 @Component({
   selector: 'app-stocke-details',
   templateUrl: './stocke-details.component.html',

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Achate } from '../achate'
-import { AchateService } from '../achate.service'
+import { Achate } from '../module/achate'
+import { AchateService } from '../service/achate.service'
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-achate-list',

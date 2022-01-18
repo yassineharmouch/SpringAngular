@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Ventee } from '../ventee';
+import { Ventee } from '../module/ventee';
 import { ActivatedRoute } from '@angular/router';
-import { VenteeService } from '../ventee.service';
+import { VenteeService } from '../service/ventee.service';
 @Component({
   selector: 'app-ventee-details',
   templateUrl: './ventee-details.component.html',

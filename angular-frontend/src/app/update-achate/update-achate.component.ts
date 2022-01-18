@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AchateService } from '../achate.service';
-import { Achate } from '../achate';
+import { AchateService } from '../service/achate.service';
+import { Achate } from '../module/achate';
 import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-update-achate',

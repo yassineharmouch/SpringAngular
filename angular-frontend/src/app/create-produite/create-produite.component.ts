@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Produite } from '../produite';
-import { ProduiteService } from '../produite.service';
+import { Produite } from '../module/produite';
+import { ProduiteService } from '../service/produite.service';
 import { Router } from '@angular/router';
+import { Stocke } from '../module/stocke';
+import { StockeService } from '../service/stocke.service';
 @Component({
   selector: 'app-create-produite',
   templateUrl: './create-produite.component.html',
@@ -10,11 +12,19 @@ import { Router } from '@angular/router';
 export class CreateProduiteComponent implements OnInit {
 
   
-  produite: Produite = new Produite();
+  produite = new Produite();
+  stkes: Stocke[] = [];
   constructor(private produiteService: ProduiteService,
-    private router: Router) { }
+    private router: Router, private StockeService : StockeService) { }
 
   ngOnInit(): void {
+    this.getStocks();
+  }
+
+  getStocks(){
+    this.StockeService.getStockesList().subscribe(stck => {
+      this.stkes = stck;
+    })
   }
 
   saveProduite(){
@@ -30,8 +40,8 @@ export class CreateProduiteComponent implements OnInit {
   }
   
   onSubmit(){
-    console.log(this.produite);
-    this.saveProduite();
+    console.log(this.produite.stocks);
+    //this.saveProduite();
   }
 
 }

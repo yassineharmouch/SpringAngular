@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Fournisseure } from '../fournisseure';
+import { Fournisseure } from '../module/fournisseure';
 import { ActivatedRoute } from '@angular/router';
-import { FournisseureService } from '../fournisseure.service';
+import { FournisseureService } from '../service/fournisseure.service';
 @Component({
   selector: 'app-fournisseure-details',
   templateUrl: './fournisseure-details.component.html',

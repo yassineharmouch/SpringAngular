@@ -5,7 +5,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
 
 @Entity
 @Table(name = "produites")
@@ -26,19 +29,23 @@ public class Produite {
 
 	@Column(name = "qte")
 	private String qte;
+	@ManyToOne
+	@JoinColumn
+	private Stocke stock;
 
 	public Produite() {
 
 	}
 
 
-	public Produite(long id, String name, String code, String prix, String qte) {
+	public Produite(long id, String name, String code, String prix, String qte, Stocke stock) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.code = code;
 		this.prix = prix;
 		this.qte = qte;
+		this.stock = stock;
 	}
 
 
@@ -81,6 +88,15 @@ public class Produite {
 	public void setQte(String qte) {
 		this.qte = qte;
 	}
+
+	public Stocke getStock() {
+		return stock;
+	}
+
+	public void setStock(Stocke stock) {
+		this.stock = stock;
+	}
+
 
 
 }

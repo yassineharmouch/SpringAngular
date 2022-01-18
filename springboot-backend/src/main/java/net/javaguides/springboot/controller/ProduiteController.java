@@ -28,6 +28,8 @@ public class ProduiteController {
 	@Autowired
 	private ProduiteRepository produiteRepository;
 
+	@Autowired
+	private StockeController stockeController;
 	// get all employees
 	@GetMapping("/produites")
 	public List<Produite> getAllProduites(){

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FournisseureService } from '../fournisseure.service';
-import { Fournisseure } from '../fournisseure';
+import { FournisseureService } from '../service/fournisseure.service';
+import { Fournisseure } from '../module/fournisseure';
 import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-update-fournisseure',

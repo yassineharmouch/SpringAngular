@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Ventee} from '../ventee';
-import { VenteeService } from '../ventee.service';
+import { Ventee} from '../module/ventee';
+import { VenteeService } from '../service/ventee.service';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-create-ventee',

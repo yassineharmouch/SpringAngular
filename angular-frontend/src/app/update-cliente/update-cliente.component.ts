@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ClienteService } from '../cliente.service';
-import { Cliente } from '../cliente';
+import { ClienteService } from '../service/cliente.service';
+import { Cliente } from '../module/cliente';
 import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-update-cliente',

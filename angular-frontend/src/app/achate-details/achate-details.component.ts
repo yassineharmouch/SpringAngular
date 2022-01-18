@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Achate } from '../achate';
+import { Achate } from '../module/achate';
 import { ActivatedRoute } from '@angular/router';
-import { AchateService } from '../achate.service';
+import { AchateService } from '../service/achate.service';
 @Component({
   selector: 'app-achate-details',
   templateUrl: './achate-details.component.html',

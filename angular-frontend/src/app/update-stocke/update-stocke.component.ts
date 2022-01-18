@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { StockeService } from '../stocke.service';
-import { Stocke } from '../stocke';
+import { StockeService } from '../service/stocke.service';
+import { Stocke } from '../module/stocke';
 import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-update-stocke',
