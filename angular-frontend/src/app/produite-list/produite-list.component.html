@@ -6,6 +6,7 @@
             <th>  Code </th>
             <th> Prix</th>
             <th> Qte</th>
+            <th> Stock</th>
             <th> Actions </th>
         </tr>
     </thead>
@@ -15,6 +16,7 @@
             <td> {{ produite.code }} </td>
             <td> {{ produite.prix }} </td>
             <td> {{ produite.qte }} </td>
+            <td> {{ produite.stock.name}} </td>
             <td>
                 <button (click) = "updateProduite(produite.id)" class = "btn btn-info"> Update</button>
                 <button (click) = "deleteProduite(produite.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>

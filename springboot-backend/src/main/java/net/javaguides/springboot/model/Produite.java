@@ -1,5 +1,7 @@
 package net.javaguides.springboot.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -29,17 +31,23 @@ public class Produite {
 
 	@Column(name = "qte")
 	private String qte;
+
 	@ManyToOne
-	@JoinColumn
+	@JoinColumn(name = "id_stock", nullable = true)
 	private Stocke stock;
 
 	public Produite() {
 
 	}
-
+	public Produite( String name, String code, String prix, String qte, Stocke stock) {
+		this.name = name;
+		this.code = code;
+		this.prix = prix;
+		this.qte = qte;
+		this.stock = stock;
+	}
 
 	public Produite(long id, String name, String code, String prix, String qte, Stocke stock) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.code = code;

@@ -12,6 +12,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.Valid;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
@@ -28,25 +29,23 @@ public class Stocke {
 
 	@Column(name = "adresse")
 	private String adresse;
-	@JsonManagedReference
-	@OneToMany(mappedBy = "stock")
-	@Valid
-	private List<Produite> produit = new ArrayList<>();
 
-
+	/*@OneToMany(targetEntity = Produite.class, mappedBy = "stock")
+	private List<Produite> produit;*/
 
 	public Stocke() {
 
 	}
 
+	public Stocke(String name, String adresse) {
+		this.name = name;
+		this.adresse = adresse;
+	}
 
-
-	public Stocke(long id, String name, String adresse, @Valid List<Produite> produit) {
-		super();
+	public Stocke(long id, String name, String adresse) {
 		this.id = id;
 		this.name = name;
 		this.adresse = adresse;
-		this.produit = produit;
 	}
 
 
@@ -79,22 +78,16 @@ public class Stocke {
 		return adresse;
 	}
 
-
-
 	public void setAdresse(String adresse) {
 		this.adresse = adresse;
 	}
 
-
-
-	public List<Produite> getProduit() {
+	/*public List<Produite> getProduit() {
 		return produit;
 	}
 
-
-
 	public void setProduit(List<Produite> produit) {
 		this.produit = produit;
-	}
+	}*/
 
 }

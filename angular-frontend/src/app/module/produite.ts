@@ -6,5 +6,5 @@ export class Produite {
     code: string;
     prix: string;
     qte: string;
-    stocks : Stocke;
+    stock: Stocke;
 }

@@ -62,7 +62,7 @@ public class ProduiteController {
 		produite.setCode(produiteDetails.getCode());
 		produite.setPrix(produiteDetails.getPrix());
 		produite.setQte(produiteDetails.getQte());
-
+		produite.setStock(produiteDetails.getStock());
 
 		Produite updatedProduite = produiteRepository.save(produite);
 		return ResponseEntity.ok(updatedProduite);

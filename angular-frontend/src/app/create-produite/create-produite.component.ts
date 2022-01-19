@@ -28,20 +28,14 @@ export class CreateProduiteComponent implements OnInit {
   }
 
   saveProduite(){
-    this.produiteService.createProduite(this.produite).subscribe( data =>{
-      console.log(data);
-      this.goToProduiteList();
-    },
-    error => console.log(error));
+    console.log(this.produite);
+    this.produiteService.createProduite(this.produite).subscribe(() => {
+     this.goToProduiteList();
+    })
   }
 
   goToProduiteList(){
     this.router.navigate(['/produites']);
-  }
-  
-  onSubmit(){
-    console.log(this.produite.stocks);
-    //this.saveProduite();
   }
 
 }
