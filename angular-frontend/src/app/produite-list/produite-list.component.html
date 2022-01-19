@@ -11,7 +11,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor = "let produite of produites" >
+        <tr *ngFor = "let produite of produites" [ngStyle]="{'background-color' : (produite.qte <= 5) ? 'indianred' : ''}" >
             <td> {{ produite.name }} </td>
             <td> {{ produite.code }} </td>
             <td> {{ produite.prix }} </td>
