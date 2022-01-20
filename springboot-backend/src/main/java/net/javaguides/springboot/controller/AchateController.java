@@ -58,6 +58,7 @@ public class AchateController {
 				.orElseThrow(() -> new ResourceNotFoundException("Achate not exist with id :" + id));
 
 		achate.setDate(achateDetails.getDate());
+		achate.setFournisseure(achateDetails.getFournisseure());
 
 
 		Achate updatedAchate = achateRepository.save(achate);

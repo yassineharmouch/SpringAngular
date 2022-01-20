@@ -22,6 +22,7 @@ export class VenteeListComponent implements OnInit {
   private getVentees(){
     this.venteeService.getVenteesList().subscribe(data => {
       this.ventees = data;
+      console.log(data);
     });
   }
 

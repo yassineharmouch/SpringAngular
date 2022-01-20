@@ -57,7 +57,8 @@ public class VenteeController {
 				.orElseThrow(() -> new ResourceNotFoundException("Ventee not exist with id :" + id));
 
 		ventee.setDate(venteeDetails.getDate());
-
+		ventee.setClient(venteeDetails.getClient());
+		ventee.setProduite(venteeDetails.getProduite());
 
 		Ventee updatedVentee = venteeRepository.save(ventee);
 		return ResponseEntity.ok(updatedVentee);

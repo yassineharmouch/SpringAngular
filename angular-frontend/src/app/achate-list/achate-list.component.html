@@ -3,12 +3,14 @@
     <thead>
         <tr>
             <th>  Date</th>
+            <th>  Fournisseur</th>
             <th> Actions </th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor = "let achate of achates" >
             <td> {{ achate.date }} </td>
+            <td> {{ achate.fournisseure.prenom }} </td>
             <td>
                 <button (click) = "updateAchate(achate.id)" class = "btn btn-info"> Update</button>
                 <button (click) = "deleteAchate(achate.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>

@@ -2,12 +2,7 @@ package net.javaguides.springboot.model;
 
 import java.sql.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "Achates")
@@ -18,18 +13,27 @@ public class Achate {
 	private long id;
 
 
-
 	@Column(name = "date")
 	private String date;
 
+	@ManyToOne
+	@JoinColumn(name = "id_fournisseur", nullable = true)
+	private Fournisseure fournisseure;
 	public Achate() {
 
 	}
-	public Achate(long id, String date) {
-		super();
+
+	public Achate(String date, Fournisseure fournisseure) {
+		this.date = date;
+		this.fournisseure = fournisseure;
+	}
+
+	public Achate(long id, String date, Fournisseure fournisseure) {
 		this.id = id;
 		this.date = date;
+		this.fournisseure = fournisseure;
 	}
+
 	public long getId() {
 		return id;
 	}
@@ -44,5 +48,11 @@ public class Achate {
 		this.date = date;
 	}
 
+	public Fournisseure getFournisseure() {
+		return fournisseure;
+	}
 
+	public void setFournisseure(Fournisseure fournisseure) {
+		this.fournisseure = fournisseure;
+	}
 }
